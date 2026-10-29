@@ -1,0 +1,198 @@
+
+/* ===== Global Styles ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #7567f8;
+    --primary-hover: #5b4ce0;
+    --background: #0b1020;
+    --surface: #141b2d;
+    --surface-light: #1b2439;
+    --text: #f1f5ff;
+    --muted: #9ba8c2;
+    --border: #29344d;
+    --success: #2dd4a0;
+    --danger: #fb7185;
+    --shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at top right, #7567f815, transparent 40%),
+        var(--background);
+    color: var(--text);
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Header ===== */
+header {
+    padding: 25px 6%;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header h1 {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    background: linear-gradient(90deg, #a99fff, #6f9cff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: white;
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* ===== Language & Theme Buttons ===== */
+.header-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header-controls button {
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--surface-light);
+    color: var(--text);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.header-controls button:hover {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== Sidebar ===== */
+aside {
+    position: fixed;
+    top: 125px;
+    bottom: 25px;
+    left: 25px;
+    width: 220px;
+    padding: 25px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+aside h2 {
+    margin-bottom: 22px;
+    font-size: 19px;
+}
+
+aside ul {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+}
+
+aside li {
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+aside li:hover {
+    background: var(--surface-light);
+    color: var(--text);
+    padding-left: 20px;
+}
+
+/* ===== Main Content ===== */
+main {
+    width: calc(100% - 295px);
+    max-width: 1450px;
+    margin: 35px 25px 35px 270px;
+    min-width: 0;
+}
+
+section {
+    margin-bottom: 28px;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    transition: border-color 0.25s ease;
+}
+
+section:hover {
+    border-color: #7567f844;
+}
+
+section h2 {
+    margin-bottom: 22px;
+    font-size: 21px;
+    font-weight: 750;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    margin-top: 9px;
+    border-radius: 10px;
+    background: var(--primary);
+}
+
+/* ===== Customers Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+thead {
+    background: var(--surface-light);
+}
+
